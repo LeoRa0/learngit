@@ -22,9 +22,7 @@
 
 ###2.1	用例模型###
 &emsp;&emsp;系统用例图如下：  
-<center>
-  ![](http://i.imgur.com/EcZfkXy.png)  
-</center>
+<center>![](http://i.imgur.com/EcZfkXy.png)</center>
 
 &emsp;&emsp;用例的概要描述如下表所示：
 <table class="table table-striped table-condensed" border="1" cellspacing="0" align="center" frame="box">
