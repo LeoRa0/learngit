@@ -1,4 +1,3 @@
-<link href="http://kevinburke.bitbucket.org/markdowncss/markdown.css" rel="stylesheet"></link>
 # <center>小学生四则运算测试系统软件需求说明书</center> #
 ## 1.引言 ##
 ###1.1 目的  ###
