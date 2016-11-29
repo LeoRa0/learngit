@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.1.7//EN"
+    "http://struts.apache.org/dtds/struts-2.1.7.dtd">
+<struts>
+   <package name="user" extends="zhcp-default">
+      <action name="selClasses" class="zhcp.action.user.UserAction" method="selClasses">
+          <result type="json">
+              <param name="root">jsonClasses</param>
+          </result>
+      </action>
+      <action name="listUser" class="zhcp.action.user.UserAction" method="listUser">
+         <result>UserMes_Table.jsp</result>
+      </action>
+      <action name="addUser" class="zhcp.action.user.UserAction" method="addUser">
+         <result>AddUser.jsp</result>
+      </action>
+      <action name="deleteUser" class="zhcp.action.user.UserAction" method="deleteUser">
+          <result type="redirectAction">
+             <param name="actionName">listUser</param>
+             <param name="namespace">/sys/user</param>
+             <param name="level">${level}</param>
+             <param name="class_abbr">${class_abbr}</param>    
+          </result>
+      </action>
+      <action name="updateUser" class="zhcp.action.user.UserAction" method="updateUser">
+         <result>DetailUser.jsp</result>
+      </action>
+   </package>
+</struts>

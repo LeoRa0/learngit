@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.1.7//EN"
+    "http://struts.apache.org/dtds/struts-2.1.7.dtd">
+<struts>
+   <package name="code" extends="zhcp-default">
+       <action name="checkCode" class="zhcp.action.ImageAction">
+           <result name="success" type="stream">
+               <param name="inputName">imageStream</param>
+           </result>
+       </action>
+       <action name="createMajor" class="zhcp.action.CreateMajorAction">
+          <result type="json">
+             <param name="root">dataJSON</param>
+          </result>
+       </action>
+   </package>
+   <package name="class"  extends="zhcp-default">
+       <action name="login" class="zhcp.action.LoginAction" method="login">
+          <result name="success" type="redirect">/main/main.jsp</result>
+          <result name="fail" type="redirect">/login/login.jsp</result>
+       </action>
+       <action name="logout" class="zhcp.action.LoginAction" method="logout">
+          <result type="redirect">/login/login.jsp</result>
+       </action>
+       <action name="addClass" class="zhcp.action.user.ClassAction" method="addClass">
+          <result>AddClass.jsp</result>
+       </action>
+       <action name="listAllClass" class="zhcp.action.user.ClassAction" method="listAllClass">
+           <result>ClassMes_Table.jsp</result>
+       </action>
+       <action name="deleteClass" class="zhcp.action.user.ClassAction" method="deleteClass">
+          <result type="chain">listAllClass</result>
+          <result name="failed">/login/Error.jsp</result>
+       </action>
+       <action name="updateClass" class="zhcp.action.user.ClassAction" method="updateClass">
+          <result>DetailClass.jsp</result>
+       </action>
+   </package>
+</struts>

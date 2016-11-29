@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.1.7//EN"
+    "http://struts.apache.org/dtds/struts-2.1.7.dtd">
+<struts>
+   <include file="struts-class.xml"></include>
+   <include file="struts-user.xml"></include>
+   <include file="struts-score.xml"></include>
+   <include file="struts-base-score.xml"></include>
+   
+   <package name="zhcp-default" extends="json-default">
+        <!-- （利用拦截器）定义各个模块使用的元素 -->
+        <interceptors>
+           <!-- 定义自定义拦截器，事务处理 -->
+           <interceptor name="transaction" class="zhcp.interceptor.TransactionInterceptor"/>
+           
+           <interceptor-stack name="zhcpStack">
+               <interceptor-ref name="transaction"/>
+               <interceptor-ref name="defaultStack"/>
+           </interceptor-stack>
+        </interceptors>
+        
+        <!-- 默认调用拦截器栈 -->
+        <default-interceptor-ref name="zhcpStack"/>
+        
+        <global-results>
+            <result name="error">/login/Error.jsp</result>
+            <result name="failed">/login/Error.jsp</result>
+        </global-results>
+   </package>
+</struts>    

@@ -1,0 +1,60 @@
+body {
+	SCROLLBAR-FACE-COLOR: #f4fffb;
+}
+
+div {
+	SCROLLBAR-FACE-COLOR: #f4fffb;
+	SCROLLBAR-HIGHLIGHT-COLOR: #89bfa7;
+	SCROLLBAR-SHADOW-COLOR: #bfe5d5;
+	SCROLLBAR-3DLIGHT-COLOR: #f4fffb;
+	SCROLLBAR-ARROW-COLOR: #bfe5d5;
+	SCROLLBAR-TRACK-COLOR: #bfe5d5;
+	SCROLLBAR-DARKSHADOW-COLOR: #f4fffb;
+}
+
+span {
+	color: black;
+	font-size: 12px;
+	TEXT-DECORATION: none
+}
+
+td {
+	font-family: "ËÎÌו";
+	font-size: 12px;
+}
+
+
+
+hr {
+	color: #89bfa7;
+	size: 5px;
+}
+
+a {
+	font-size: 12px;
+	text-decoration: none;
+	font-family: "ËÎÌו";
+	color: #660099
+}
+
+a:link {
+	color: #003399;
+	font-size: 12px;
+}
+
+a:visited {
+	color: #003399;
+	font-size: 12px;
+}
+
+a:active {
+	color: #990099;
+	font-size: 12px;
+}
+
+a:hover {
+	font-size: 12px;
+	color: #5082E6;
+	font-family: "ËÎÌו";
+	text-decoration: none;
+}

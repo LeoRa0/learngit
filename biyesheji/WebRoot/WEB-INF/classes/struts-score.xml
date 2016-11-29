@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.1.7//EN"
+    "http://struts.apache.org/dtds/struts-2.1.7.dtd">
+<struts>
+   <package name="score" extends="zhcp-default">
+      <action name="listPecScore" class="zhcp.action.score.ScoreAction" method="listPecScore">
+         <result>Pec_Table.jsp</result>
+      </action>
+      <action name="listPSMes" class="zhcp.action.score.ScoreAction" method="listPSMes">
+         <result>Add_Pec.jsp</result>
+      </action>
+      <action name="addPS" class="zhcp.action.score.ScoreAction" method="addPS">
+         <result type="redirect">/login/success.jsp</result>
+      </action>
+      
+      <action name="listProScore" class="zhcp.action.score.ScoreAction" method="listProScore">
+         <result>Pro_Table.jsp</result>
+      </action>
+       <action name="listProMes" class="zhcp.action.score.ScoreAction" method="listProMes">
+         <result>Add_Pro.jsp</result>
+      </action>
+      <action name="addPro" class="zhcp.action.score.ScoreAction" method="addPro">
+         <result type="redirect">/login/success.jsp</result>
+      </action>
+   </package>
+</struts>

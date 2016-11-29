@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.1.7//EN"
+    "http://struts.apache.org/dtds/struts-2.1.7.dtd">
+<struts>
+  <package name="base-score" extends="zhcp-default">
+    <action name="redirect_*" class="zhcp.action.score.BaseScoreAction" method="{1}">
+       <result>baseScore.jsp</result>
+    </action>
+    <action name="listScore_*" class="zhcp.action.score.BaseScoreAction" method="listScore_{1}">
+       <result>{1}_Table.jsp</result>
+    </action>
+    <action name="listMes_*" class="zhcp.action.score.BaseScoreAction" method="listMes_{1}">
+       <result>add_{1}.jsp</result>
+    </action>
+    <action name="addMes_*" class="zhcp.action.score.BaseScoreAction" method="addMes_{1}">
+       <result type="redirect">/login/success.jsp</result>
+    </action>
+  </package>
+
+</struts>

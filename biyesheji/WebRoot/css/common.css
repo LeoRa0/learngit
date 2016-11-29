@@ -1,0 +1,44 @@
+* {
+	margin: 0px;
+	padding: 0px;
+}
+
+body{
+   font-size: 15px; 
+   font-family: "ËÎÌו"; 
+   background-color:#f4fffb;
+}
+
+a {
+	cursor: pointer;
+	text-decoration: none;
+	color: #666;
+	font-family: "ËÎÌו";
+	font-size: 12px;
+}
+
+a:link {
+	color: #0041D3;
+	text-decoration: none
+}
+
+a:visited {
+	color: #0041D3;
+	text-decoration: none
+}
+
+a:hover {
+	color: #ff7000;
+	text-decoration: underline
+}
+
+a:active {
+	color: #bc2931;
+	text-decoration: underline
+}
+
+.font1{
+   font-size:14px;
+   font-family:"ËÎÌו";
+   font-weight:600;
+}
